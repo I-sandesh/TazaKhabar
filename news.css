@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 *{
+    user-select: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,25 +25,27 @@
     box-shadow: 0 0 13px 5px rgb(94, 92, 92);
     font-size: 1em;
     text-transform: capitalize;
-    font-size: 2vw;
+    max-width: 1200px;
 }
 .post img{
-    height: 50%;
-    margin: 5px;
-    box-shadow: 0 0 13px 1px rgb(94, 92, 92);
+    height: 20vh;
+    width: 20vh;
+    margin: 5px 10px;
+    box-shadow: 0 -4 13px 1px rgb(94, 92, 92);
     max-width: 30vw;
+
 }
 .post .post-content{
     min-height: 100%;
     position: relative;
-    
+    font-size: 1.5rem;
 }
 .author{
     position: absolute;
     bottom: 0;
     left: 3%;
-    color: #adadad;
-    font-size: large;
+    color: #b4a4a4;
+    font-size: 1.4rem;
 }
 h1.heading{
     font-size: 3em;
@@ -51,4 +54,30 @@ h1.heading{
     padding: 10px 0;
     color: #f6f6f8;
     text-shadow: 1px 1px 5px #c91d2b;
+}
+.loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.loading span{
+    animation: load 2s linear infinite;
+    display: inline-block;
+    font-size: 3em;
+
+}
+.loading span:nth-child(2n-1){
+    animation-delay: 0.2s;
+}
+
+@keyframes load {
+    0%,100%{
+        transform: translateY(10px) scale(2);
+        color: red;
+    }
+    50%{
+        transform: translateY(0px);
+        color: blue;
+    }
 }
