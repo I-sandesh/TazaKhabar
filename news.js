@@ -1,5 +1,5 @@
 let api_key = "jtNlZAGUrre09G4omeQ0IS4PyUMEull0";
-let query = "elon Musk";
+let query = "technology";
 let response = fetch("https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+`${query}`+"&api-key="+`${api_key}`);
 response.then((data)=>data.json()).then((data)=>{
     // 
