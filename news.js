@@ -14,8 +14,8 @@ response.then((data)=>data.json()).then((data)=>{
                 <img src="https://static01.nyt.com/${post.multimedia.length?post.multimedia[0].url:'#'}">
                 <div class="post-content">
                     <h1 class="title">${post.abstract.slice(0,80)}...</h1>
-
-                    <span class="author">06 Jan 2022</span>
+                     <br>
+                    <span class="author">05 april 2023</span>
                 </div>
             </div>
         `;
